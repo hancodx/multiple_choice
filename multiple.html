@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="src/css/main.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+</head>
+<body>
+	<form action="" method="post">
+		<div style="max-width: 50%;">
+			<label for="skills">Skills</label>
+			<select name="skills" id="skills" multiple>
+				<option value="web_dev">web dev</option>
+				<option value="mobile_dev">mobile dev</option>
+				<option value="design">design</option>
+				<option value="leadership">leadership</option>
+				<option value="management">management</option>
+				<option value="languages">languages</option>
+			</select>
+			  
+		</div>
+	</form>
+
+	<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+	<script>
+		new MultiSelectTag('skills')  // id
+		new MultiSelectTag('countries', {
+			rounded: true,    // default true
+			shadow: true,      // default false
+			placeholder: 'Search',  // default Search...
+			onChange: function(values) {
+			    console.log(values)
+			}
+		});
+	</script>
+</body>
+</html>
